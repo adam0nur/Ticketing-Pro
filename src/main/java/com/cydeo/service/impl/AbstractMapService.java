@@ -7,6 +7,7 @@ import java.util.Map;
 
 public abstract class AbstractMapService <T,ID>{
 
+
     protected Map<ID,T> map = new HashMap<>();
 
 
@@ -27,4 +28,7 @@ public abstract class AbstractMapService <T,ID>{
         map.remove(id);
     }
 
+    void update(ID id,T object){
+        map.put(id,object);
+    }
 }
